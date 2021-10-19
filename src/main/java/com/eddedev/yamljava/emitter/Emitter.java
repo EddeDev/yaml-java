@@ -1,5 +1,11 @@
 package com.eddedev.yamljava.emitter;
 
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import com.eddedev.yamljava.utils.FileUtils;
+
 /**
  * @author Edvin Pettersson
  */
@@ -213,7 +219,6 @@ public final class Emitter {
 	
 	private void emitBeginMap() {
 		prepareNode(getNextGroupType(GroupType.MAP));
-		
 		onGroupBegin(GroupType.MAP);
 	}
 	
@@ -223,6 +228,7 @@ public final class Emitter {
 		
 		if (getCurrentGroupFlowType() == FlowType.FLOW) {
 			buffer.writeIndent(currentIndent);
+			
 			if (getCurrentGroupChildCount() == 0)
 				buffer.write('{');
 			buffer.write('}');
@@ -418,5 +424,17 @@ public final class Emitter {
 
 	public String string() {
 		return buffer.string();
+	}
+	
+	public void writeToFile(String filepath) {
+		FileUtils.write(Paths.get(filepath), string());
+	}
+	
+	public void writeToFile(final Path filepath) {
+		FileUtils.write(filepath, string());
+	}
+	
+	public void writeToFile(final File file) {
+		FileUtils.write(file.toPath(), string());
 	}
 }
