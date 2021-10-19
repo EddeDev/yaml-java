@@ -17,7 +17,7 @@ String result = emitter.string();
 
 Node data = Parser.parse(result);
 
-String value = data.get("ThisIsAKey");
+String value = data.get("ThisIsAKey").as(String.class);
 System.out.println(value);
 
 // Output: ThisIsAValue
