@@ -10,7 +10,7 @@ public final class GroupRegistry {
 	private final List<Group> groups;
 	
 	public GroupRegistry() {
-		groups = new ArrayList<Group>();
+		groups = new ArrayList<>();
 	}
 	
 	public void push(Group group) {

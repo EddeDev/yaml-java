@@ -33,10 +33,10 @@ public final class OutputBuffer {
 		buffer.append(string);
 		
 		char[] chars = string.toCharArray();
-		for (int i = 0; i < chars.length; i++) {
+		for (char aChar : chars) {
 			position++;
 			column++;
-			if (chars[i] == '\n') {
+			if (aChar == '\n') {
 				row++;
 				column = 0;
 			}

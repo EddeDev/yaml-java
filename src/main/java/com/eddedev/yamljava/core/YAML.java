@@ -1,7 +1,7 @@
 package com.eddedev.yamljava.core;
 
 public final class YAML {
-	private static final AssertHandler DEFAULT_ASSERT_HANDLER = message -> System.err.println(message);
+	private static final AssertHandler DEFAULT_ASSERT_HANDLER = System.err::println;
 	
 	private static AssertHandler assertHandler = DEFAULT_ASSERT_HANDLER;
 	
