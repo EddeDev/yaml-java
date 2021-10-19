@@ -6,6 +6,9 @@ import java.nio.file.Path;
 
 import com.eddedev.yamljava.core.YAML;
 
+/**
+ * @author Edvin Pettersson
+ */
 public final class FileUtils {
 	public static String read(final Path filepath) {
 		String result = null;
@@ -22,7 +25,7 @@ public final class FileUtils {
 			if (!Files.exists(filepath))
 				Files.createFile(filepath);
 			
-			Files.writeString(filepath, string);
+			Files.write(filepath, string.getBytes());
 		} catch (final IOException e) {
 			YAML.getAssertHandler().Assert(false, "Could not write to file: " + filepath);
 		}

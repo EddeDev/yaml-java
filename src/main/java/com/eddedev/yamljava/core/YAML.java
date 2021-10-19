@@ -1,5 +1,8 @@
 package com.eddedev.yamljava.core;
 
+/**
+ * @author Edvin Pettersson
+ */
 public final class YAML {
 	private static final AssertHandler DEFAULT_ASSERT_HANDLER = System.err::println;
 	
