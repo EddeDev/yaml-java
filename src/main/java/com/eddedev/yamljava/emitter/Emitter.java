@@ -13,10 +13,10 @@ public final class Emitter {
 	private final GroupRegistry groupRegistry;
 	private final OutputBuffer buffer;
 	
-	private Event mapFormat;
-	private Event sequenceFormat;
+	private final Event mapFormat;
+	private final Event sequenceFormat;
 	
-	private int indent;
+	private final int indent;
 	private int currentIndent;
 	private int documentCount;
 	
