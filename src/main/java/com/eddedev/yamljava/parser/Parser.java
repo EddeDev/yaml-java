@@ -4,11 +4,10 @@ package com.eddedev.yamljava.parser;
  * @author Edvin Pettersson
  */
 public class Parser {
-	public Parser(final String filepath) {
-		throw new UnsupportedOperationException("Not implemented yet");
+	private Parser() {
 	}
 	
-	public Node get(final String key) {
+	public static Node parse(final String filepath) {
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
 }

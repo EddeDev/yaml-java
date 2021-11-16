@@ -23,7 +23,7 @@ public final class Group {
 		return type;
 	}
 	
-	public void setType(GroupType type) {
+	public void setType(final GroupType type) {
 		this.type = type;
 	}
 	
@@ -31,7 +31,7 @@ public final class Group {
 		return flowType;
 	}
 
-	public void setFlowType(FlowType flowType) {
+	public void setFlowType(final FlowType flowType) {
 		this.flowType = flowType;
 	}
 
@@ -39,7 +39,7 @@ public final class Group {
 		return indent;
 	}
 
-	public void setIndent(int indent) {
+	public void setIndent(final int indent) {
 		this.indent = indent;
 	}
 

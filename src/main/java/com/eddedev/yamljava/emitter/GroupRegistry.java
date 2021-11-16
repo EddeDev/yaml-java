@@ -13,15 +13,15 @@ public final class GroupRegistry {
 		groups = new ArrayList<Group>();
 	}
 	
-	public void push(Group group) {
+	public void push(final Group group) {
 		groups.add(group);
 	}
 	
-	public void pop(Group group) {
+	public void pop(final Group group) {
 		groups.remove(group);
 	}
 	
-	public Group get(int index) {
+	public Group get(final int index) {
 		return groups.get(index);
 	}
 	

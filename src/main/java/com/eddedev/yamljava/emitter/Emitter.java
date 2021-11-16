@@ -426,7 +426,7 @@ public final class Emitter {
 		return buffer.string();
 	}
 	
-	public void writeToFile(String filepath) {
+	public void writeToFile(final String filepath) {
 		FileUtils.write(Paths.get(filepath), string());
 	}
 	
