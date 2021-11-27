@@ -4,7 +4,7 @@ package com.eddedev.yamljava.emitter;
  * @author Edvin Pettersson
  */
 public final class OutputBuffer {
-	private static final int INITIAL_BUFFER_SIZE = 1024 * 16;
+	private static final int INITIAL_BUFFER_SIZE = 1024 * 8;
 	
 	private static final String LINE_SEPARATOR = System.getProperty("line.separator");
 			
